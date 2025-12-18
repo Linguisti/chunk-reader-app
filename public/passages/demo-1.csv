@@ -1,0 +1,7 @@
+passage_id,title,sentence_id,chunk_index,en,ko
+demo-1,Demo Passage 1,1,0,After years of practice,수년간의 연습 끝에
+demo-1,Demo Passage 1,1,1,the pianist,그 피아니스트는
+demo-1,Demo Passage 1,1,2,finally performed,마침내 연주했다
+demo-1,Demo Passage 1,2,0,The audience,관객은
+demo-1,Demo Passage 1,2,1,held their breath,숨을 죽였고
+demo-1,Demo Passage 1,2,2,in silence,침묵 속에서
