@@ -1,0 +1,363 @@
+{
+  "passage_id": "demo-2",
+  "title": "The Little Prince and What Becomes “Yours”",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "chunks": [
+        { "en": "The Little Prince lives alone", "ko": "어린 왕자는 혼자 산다" },
+        { "en": "on a very small planet.", "ko": "아주 작은 행성에서." }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "chunks": [
+        { "en": "On his planet,", "ko": "그의 행성에는," },
+        { "en": "there are a few volcanoes", "ko": "몇 개의 화산이 있고" },
+        { "en": "and many small trees.", "ko": "그리고 많은 작은 나무들이 있다." }
+      ]
+    },
+    {
+      "sentence_id": 3,
+      "chunks": [
+        { "en": "Every day,", "ko": "매일," },
+        { "en": "he takes care of them.", "ko": "그는 그것들을 돌본다." }
+      ]
+    },
+    {
+      "sentence_id": 4,
+      "chunks": [
+        { "en": "There is also", "ko": "또한" },
+        { "en": "one rose.", "ko": "한 송이 장미가 있다." }
+      ]
+    },
+    {
+      "sentence_id": 5,
+      "chunks": [
+        { "en": "The rose is not easy.", "ko": "그 장미는 쉽지 않다." }
+      ]
+    },
+    {
+      "sentence_id": 6,
+      "chunks": [
+        { "en": "She complains,", "ko": "그녀는 불평하고," },
+        { "en": "asks for attention,", "ko": "관심을 요구하며," },
+        { "en": "and sometimes hurts", "ko": "그리고 때때로 상처를 준다" },
+        { "en": "the Little Prince’s feelings.", "ko": "어린 왕자의 감정을." }
+      ]
+    },
+    {
+      "sentence_id": 7,
+      "chunks": [
+        { "en": "He tries", "ko": "그는 노력한다" },
+        { "en": "to understand her,", "ko": "그녀를 이해하려고," },
+        { "en": "but it is not always easy.", "ko": "하지만 그것이 항상 쉬운 것은 아니다." }
+      ]
+    },
+    {
+      "sentence_id": 8,
+      "chunks": [
+        { "en": "After some time,", "ko": "시간이 좀 지난 뒤," },
+        { "en": "the Little Prince decides", "ko": "어린 왕자는 결정한다" },
+        { "en": "to leave his planet", "ko": "자신의 행성을 떠나" },
+        { "en": "and travel", "ko": "여행하러" },
+        { "en": "to other places.", "ko": "다른 곳들로." }
+      ]
+    },
+    {
+      "sentence_id": 9,
+      "chunks": [
+        { "en": "During his journey,", "ko": "그의 여행 동안," },
+        { "en": "he visits", "ko": "그는 방문한다" },
+        { "en": "many small planets.", "ko": "많은 작은 행성들을." }
+      ]
+    },
+    {
+      "sentence_id": 10,
+      "chunks": [
+        { "en": "On each planet,", "ko": "각 행성에서," },
+        { "en": "he meets", "ko": "그는 만난다" },
+        { "en": "an adult.", "ko": "한 어른을." }
+      ]
+    },
+    {
+      "sentence_id": 11,
+      "chunks": [
+        { "en": "One adult is a king", "ko": "어떤 어른은 왕인데" },
+        { "en": "who likes to give orders,", "ko": "명령 내리는 것을 좋아하지만," },
+        { "en": "but has no one to rule.", "ko": "다스릴 사람이 아무도 없다." }
+      ]
+    },
+    {
+      "sentence_id": 12,
+      "chunks": [
+        { "en": "Another adult spends", "ko": "또 다른 어른은 쓴다" },
+        { "en": "all his time", "ko": "자신의 모든 시간을" },
+        { "en": "counting numbers,", "ko": "숫자를 세는 데에," },
+        { "en": "but does not know", "ko": "하지만 알지 못한다" },
+        { "en": "why they matter.", "ko": "그것들이 왜 중요한지." }
+      ]
+    },
+    {
+      "sentence_id": 13,
+      "chunks": [
+        { "en": "Another adult is always busy", "ko": "또 다른 어른은 늘 바쁘고" },
+        { "en": "and never stops", "ko": "그리고 결코 멈추지 않는다" },
+        { "en": "to listen.", "ko": "듣기 위해서." }
+      ]
+    },
+    {
+      "sentence_id": 14,
+      "chunks": [
+        { "en": "The Little Prince feels", "ko": "어린 왕자는 느낀다" },
+        { "en": "something strange", "ko": "무언가 이상한 것을" },
+        { "en": "about these adults.", "ko": "이 어른들에 대해." }
+      ]
+    },
+    {
+      "sentence_id": 15,
+      "chunks": [
+        { "en": "They all work very hard,", "ko": "그들은 모두 매우 열심히 일하지만," },
+        { "en": "but they do not look happy.", "ko": "행복해 보이지 않는다." }
+      ]
+    },
+    {
+      "sentence_id": 16,
+      "chunks": [
+        { "en": "They always talk", "ko": "그들은 늘 말한다" },
+        { "en": "about what they must do,", "ko": "자신들이 해야만 하는 것에 대해," }
+      ]
+    },
+    {
+      "sentence_id": 17,
+      "chunks": [
+        { "en": "but they do not talk", "ko": "하지만 그들은 말하지 않는다" },
+        { "en": "about why they do it.", "ko": "왜 그것을 하는지에 대해서는." }
+      ]
+    },
+    {
+      "sentence_id": 18,
+      "chunks": [
+        { "en": "To the Little Prince,", "ko": "어린 왕자에게는," },
+        { "en": "their lives", "ko": "그들의 삶이" },
+        { "en": "do not seem", "ko": "…처럼 보이지 않는다" },
+        { "en": "to belong to them.", "ko": "그들 자신의 것처럼." }
+      ]
+    },
+    {
+      "sentence_id": 19,
+      "chunks": [
+        { "en": "One day,", "ko": "어느 날," },
+        { "en": "the Little Prince meets", "ko": "어린 왕자는 만난다" },
+        { "en": "a fox.", "ko": "여우를." }
+      ]
+    },
+    {
+      "sentence_id": 20,
+      "chunks": [
+        { "en": "The fox tells him", "ko": "여우는 그에게 말해준다" },
+        { "en": "about “taming.”", "ko": "‘길들이기’에 대해." }
+      ]
+    },
+    {
+      "sentence_id": 21,
+      "chunks": [
+        { "en": "To tame someone", "ko": "누군가를 길들인다는 것은" },
+        { "en": "means", "ko": "…을 의미한다" },
+        { "en": "to spend time together.", "ko": "함께 시간을 보내는 것을." }
+      ]
+    },
+    {
+      "sentence_id": 22,
+      "chunks": [
+        { "en": "It means waiting,", "ko": "그것은 기다리는 것을 의미하고," },
+        { "en": "meeting again,", "ko": "다시 만나는 것을 의미하며," },
+        { "en": "and slowly becoming special", "ko": "그리고 서서히 특별해지는 것을 의미한다" },
+        { "en": "to each other.", "ko": "서로에게." }
+      ]
+    },
+    {
+      "sentence_id": 23,
+      "chunks": [
+        { "en": "When two beings are tamed,", "ko": "두 존재가 길들여지면," },
+        { "en": "they are no longer", "ko": "그들은 더 이상 …이 아니다" },
+        { "en": "the same as others.", "ko": "다른 이들과 같은." }
+      ]
+    },
+    {
+      "sentence_id": 24,
+      "chunks": [
+        { "en": "They become important.", "ko": "그들은 중요해진다." }
+      ]
+    },
+    {
+      "sentence_id": 25,
+      "chunks": [
+        { "en": "The fox also talks", "ko": "여우는 또한 말한다" },
+        { "en": "about responsibility.", "ko": "책임에 대해서." }
+      ]
+    },
+    {
+      "sentence_id": 26,
+      "chunks": [
+        { "en": "But this responsibility", "ko": "하지만 이 책임은" },
+        { "en": "is not a punishment.", "ko": "벌이 아니다." }
+      ]
+    },
+    {
+      "sentence_id": 27,
+      "chunks": [
+        { "en": "It is something", "ko": "그것은 어떤 것이다" },
+        { "en": "that comes", "ko": "…에서 오는" },
+        { "en": "from choice.", "ko": "선택으로부터." }
+      ]
+    },
+    {
+      "sentence_id": 28,
+      "chunks": [
+        { "en": "Because you chose", "ko": "네가 선택했기 때문에" },
+        { "en": "to spend time,", "ko": "시간을 쓰는 것을," },
+        { "en": "you become responsible.", "ko": "너는 책임을 지게 된다." }
+      ]
+    },
+    {
+      "sentence_id": 29,
+      "chunks": [
+        { "en": "After hearing this,", "ko": "이것을 들은 뒤," },
+        { "en": "the Little Prince thinks", "ko": "어린 왕자는 생각한다" },
+        { "en": "about his rose.", "ko": "자신의 장미에 대해." }
+      ]
+    },
+    {
+      "sentence_id": 30,
+      "chunks": [
+        { "en": "The rose is still not perfect.", "ko": "그 장미는 여전히 완벽하지 않다." }
+      ]
+    },
+    {
+      "sentence_id": 31,
+      "chunks": [
+        { "en": "She is still difficult", "ko": "그녀는 여전히 까다롭다" },
+        { "en": "in many ways.", "ko": "여러 면에서." }
+      ]
+    },
+    {
+      "sentence_id": 32,
+      "chunks": [
+        { "en": "But he understands", "ko": "하지만 그는 이해한다" },
+        { "en": "something new.", "ko": "새로운 무언가를." }
+      ]
+    },
+    {
+      "sentence_id": 33,
+      "chunks": [
+        { "en": "The rose is special", "ko": "그 장미가 특별한 것은" },
+        { "en": "not because", "ko": "…때문이 아니라" },
+        { "en": "she is better", "ko": "그녀가 더 낫기 때문에" },
+        { "en": "than other roses.", "ko": "다른 장미들보다." }
+      ]
+    },
+    {
+      "sentence_id": 34,
+      "chunks": [
+        { "en": "She is special", "ko": "그녀가 특별한 것은" },
+        { "en": "because he spent time", "ko": "그가 시간을 썼기 때문이다" },
+        { "en": "with her.", "ko": "그녀와 함께." }
+      ]
+    },
+    {
+      "sentence_id": 35,
+      "chunks": [
+        { "en": "This story does not tell us", "ko": "이 이야기는 우리에게 말해주지 않는다" },
+        { "en": "what we should do.", "ko": "우리가 무엇을 해야 하는지를." }
+      ]
+    },
+    {
+      "sentence_id": 36,
+      "chunks": [
+        { "en": "It does not give", "ko": "그것은 주지 않는다" },
+        { "en": "clear answers.", "ko": "명확한 답을." }
+      ]
+    },
+    {
+      "sentence_id": 37,
+      "chunks": [
+        { "en": "Instead,", "ko": "대신에," },
+        { "en": "it leaves us", "ko": "그것은 남겨둔다" },
+        { "en": "with questions.", "ko": "우리에게 질문들을." }
+      ]
+    },
+    {
+      "sentence_id": 38,
+      "chunks": [
+        { "en": "Why do some things", "ko": "왜 어떤 것들은" },
+        { "en": "become important?", "ko": "중요해지는가?" }
+      ]
+    },
+    {
+      "sentence_id": 39,
+      "chunks": [
+        { "en": "Is it because of the result,", "ko": "그것은 결과 때문인가," },
+        { "en": "or because of the time", "ko": "아니면 시간 때문인가" },
+        { "en": "we give them?", "ko": "우리가 그것들에게 주는?" }
+      ]
+    },
+    {
+      "sentence_id": 40,
+      "chunks": [
+        { "en": "Even when a choice is not clear,", "ko": "선택이 분명하지 않을 때에도," },
+        { "en": "can it still be a choice?", "ko": "그것은 여전히 선택일 수 있을까?" }
+      ]
+    },
+    {
+      "sentence_id": 41,
+      "chunks": [
+        { "en": "The Little Prince does not say", "ko": "어린 왕자는 말하지 않는다" },
+        { "en": "everything", "ko": "모든 것을" },
+        { "en": "in words.", "ko": "말로." }
+      ]
+    },
+    {
+      "sentence_id": 42,
+      "chunks": [
+        { "en": "He simply keeps traveling", "ko": "그는 그저 계속 여행하며" },
+        { "en": "and thinking.", "ko": "생각한다." }
+      ]
+    },
+    {
+      "sentence_id": 43,
+      "chunks": [
+        { "en": "This story asks the reader", "ko": "이 이야기는 독자에게 요청한다" },
+        { "en": "to slow down", "ko": "속도를 늦추라고" },
+        { "en": "and think", "ko": "그리고 생각하라고" },
+        { "en": "as well.", "ko": "역시." }
+      ]
+    },
+    {
+      "sentence_id": 44,
+      "chunks": [
+        { "en": "Not to judge,", "ko": "판단하지 말고," }
+      ]
+    },
+    {
+      "sentence_id": 45,
+      "chunks": [
+        { "en": "not to decide quickly,", "ko": "빨리 결론 내리지 말고," }
+      ]
+    },
+    {
+      "sentence_id": 46,
+      "chunks": [
+        { "en": "but to quietly ask:", "ko": "하지만 조용히 물어보라고:" }
+      ]
+    },
+    {
+      "sentence_id": 47,
+      "chunks": [
+        { "en": "What in my life", "ko": "내 삶에서 무엇이" },
+        { "en": "feels like", "ko": "…처럼 느껴지는가" },
+        { "en": "it is truly mine?", "ko": "진짜로 내 것처럼?" }
+      ]
+    }
+  ]
+}
