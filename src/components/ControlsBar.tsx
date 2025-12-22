@@ -2,19 +2,15 @@ import type { CSSProperties } from "react";
 
 type Props = {
   canPrev: boolean;
-  canTranslate: boolean;
   canNext: boolean;
   onPrev: () => void;
-  onTranslate: () => void;
   onNext: () => void;
 };
 
 export default function ControlsBar({
   canPrev,
-  canTranslate,
   canNext,
   onPrev,
-  onTranslate,
   onNext,
 }: Props) {
   return (
@@ -31,17 +27,6 @@ export default function ControlsBar({
       </button>
 
       <button
-        style={{ ...styles.btn, ...(canTranslate ? {} : styles.btnDisabled) }}
-        disabled={!canTranslate}
-        onClick={(e) => {
-          e.stopPropagation(); // SentenceFrame 탭과 충돌 방지
-          onTranslate();
-        }}
-      >
-        해석 보기
-      </button>
-
-      <button
         style={{ ...styles.btn, ...(canNext ? {} : styles.btnDisabled) }}
         disabled={!canNext}
         onClick={(e) => {
@@ -49,7 +34,7 @@ export default function ControlsBar({
           onNext();
         }}
       >
-        다음 문장 ▶
+        다음 ▶
       </button>
     </div>
   );

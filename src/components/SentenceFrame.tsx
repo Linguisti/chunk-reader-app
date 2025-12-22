@@ -24,10 +24,10 @@ export default function SentenceFrame({
         style={styles.frame}
         onClick={onTap}
         role="button"
-        aria-label="Reveal next chunk"
+        aria-label="Show translation"
       >
         {visibleChunks.length === 0 ? (
-          <div style={styles.placeholder}>Tap anywhere to reveal the next chunk.</div>
+          <div style={styles.placeholder}>다음 ▶ 버튼으로 청크를 열어보세요.</div>
         ) : (
           <div style={styles.list}>
             {visibleChunks.map((c, i) => (
@@ -36,7 +36,7 @@ export default function SentenceFrame({
           </div>
         )}
 
-        <div style={styles.hint}>Tap to reveal next chunk</div>
+        <div style={styles.hint}>청크를 탭하면 해석이 나타납니다.</div>
       </div>
     </div>
   );

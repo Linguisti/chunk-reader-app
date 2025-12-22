@@ -95,45 +95,57 @@ export default function ReaderScreen({ passageId, mode, onBack }: Props) {
   const lastChunkIndex = currentSentence.chunks.length - 1;
 
   const isSentenceComplete = chunkIndex >= lastChunkIndex;
-  const canTranslate = chunkIndex >= 0;
-  const canNext = isSentenceComplete && sentenceIndex < safePassage.sentences.length - 1;
-  const canPrev = chunkIndex > -1 || sentenceIndex > 0;
+  const canNext =
+    chunkIndex < 0 ||
+    (chunkIndex >= 0 && chunkIndex < lastChunkIndex) ||
+    (isSentenceComplete && sentenceIndex < safePassage.sentences.length - 1);
+  const canPrev = chunkIndex > 0 || (chunkIndex === 0 && sentenceIndex > 0);
 
   function onTapReveal() {
     if (mode !== "chunk") return;
-    if (chunkIndex >= lastChunkIndex) return;
-    const next = chunkIndex + 1;
-    setChunkIndex(next);
-    setShowKoForChunkIndex(null);
-  }
-
-  function onPressTranslate() {
-    if (!canTranslate) return;
+    if (chunkIndex < 0) return;
     setShowKoForChunkIndex(chunkIndex);
   }
 
   function onNextSentence() {
     if (!canNext) return;
-    setSentenceIndex((i) => i + 1);
-    setChunkIndex(-1);
-    setShowKoForChunkIndex(null);
-  }
+    if (chunkIndex < 0) {
+      setChunkIndex(0);
+      setShowKoForChunkIndex(null);
+      return;
+    }
 
-  function onPrevChunk() {
-    if (!canPrev) return;
-    if (chunkIndex > -1) {
-      setChunkIndex((i) => i - 1);
+    if (chunkIndex < lastChunkIndex) {
+      setChunkIndex((i) => i + 1);
       setShowKoForChunkIndex(null);
       return;
     }
 
     setSentenceIndex((i) => {
-      const newIndex = Math.max(0, i - 1);
-      const prevSentence = safePassage.sentences[newIndex];
-      setChunkIndex(prevSentence.chunks.length - 1);
+      const nextSentence = Math.min(safePassage.sentences.length - 1, i + 1);
+      setChunkIndex(0);
       setShowKoForChunkIndex(null);
-      return newIndex;
+      return nextSentence;
     });
+  }
+
+  function onPrevChunk() {
+    if (!canPrev) return;
+    if (chunkIndex > 0) {
+      setChunkIndex((i) => i - 1);
+      setShowKoForChunkIndex(null);
+      return;
+    }
+
+    if (chunkIndex === 0 && sentenceIndex > 0) {
+      setSentenceIndex((i) => {
+        const newIndex = Math.max(0, i - 1);
+        const prevSentence = safePassage.sentences[newIndex];
+        setChunkIndex(prevSentence.chunks.length - 1);
+        setShowKoForChunkIndex(null);
+        return newIndex;
+      });
+    }
   }
 
   return (
@@ -160,10 +172,8 @@ export default function ReaderScreen({ passageId, mode, onBack }: Props) {
 
           <ControlsBar
             canPrev={canPrev}
-            canTranslate={canTranslate}
             canNext={canNext}
             onPrev={onPrevChunk}
-            onTranslate={onPressTranslate}
             onNext={onNextSentence}
           />
         </>

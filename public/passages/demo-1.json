@@ -1,0 +1,558 @@
+{
+  "passage_id": "demo-1",
+  "title": "Under the Wheel",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "chunks": [
+        {
+          "en": "Under the Wheel is a novel",
+          "ko": "『수레바퀴 아래서』는 소설이다"
+        },
+        {
+          "en": "written by Hermann Hesse.",
+          "ko": "헤르만 헤세가 쓴"
+        }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "chunks": [
+        {
+          "en": "It tells the story",
+          "ko": "그것은 이야기를 들려준다"
+        },
+        {
+          "en": "of a boy named Hans Giebenrath",
+          "ko": "한스 기벤라트라는 이름의 소년에 대한"
+        },
+        {
+          "en": "and his struggles",
+          "ko": "그리고 그의 갈등을"
+        },
+        {
+          "en": "as a student.",
+          "ko": "학생으로서의"
+        }
+      ]
+    },
+    {
+      "sentence_id": 3,
+      "chunks": [
+        {
+          "en": "This story is not only",
+          "ko": "이 이야기는 단지 ~만에 대한 것이 아니다"
+        },
+        {
+          "en": "about studying hard.",
+          "ko": "열심히 공부하는 것에"
+        }
+      ]
+    },
+    {
+      "sentence_id": 4,
+      "chunks": [
+        {
+          "en": "It is about growing up,",
+          "ko": "그것은 성장하는 것에 대한 이야기이고,"
+        },
+        {
+          "en": "pressure from adults,",
+          "ko": "어른들로부터의 압박,"
+        },
+        {
+          "en": "and thinking for yourself.",
+          "ko": "그리고 스스로 생각하는 것에 대한 이야기이다"
+        }
+      ]
+    },
+    {
+      "sentence_id": 5,
+      "chunks": [
+        {
+          "en": "Hans is a smart",
+          "ko": "한스는 똑똑하고"
+        },
+        {
+          "en": "and hardworking boy.",
+          "ko": "열심히 공부하는 소년이다"
+        }
+      ]
+    },
+    {
+      "sentence_id": 6,
+      "chunks": [
+        {
+          "en": "His father, teachers,",
+          "ko": "그의 아버지, 선생님들,"
+        },
+        {
+          "en": "and the church",
+          "ko": "그리고 교회는"
+        },
+        {
+          "en": "all have high expectations",
+          "ko": "모두 높은 기대를 가지고 있다"
+        },
+        {
+          "en": "of him.",
+          "ko": "그에게"
+        }
+      ]
+    },
+    {
+      "sentence_id": 7,
+      "chunks": [
+        {
+          "en": "They want him",
+          "ko": "그들은 그가 ~하길 원한다"
+        },
+        {
+          "en": "to enter a religious school",
+          "ko": "종교 학교에 들어가서"
+        },
+        {
+          "en": "and become a successful person.",
+          "ko": "성공한 사람이 되기를"
+        }
+      ]
+    },
+    {
+      "sentence_id": 8,
+      "chunks": [
+        {
+          "en": "Hans studies hard",
+          "ko": "한스는 열심히 공부한다"
+        },
+        {
+          "en": "because he does not want",
+          "ko": "왜냐하면 그는 ~하고 싶지 않기 때문이다"
+        },
+        {
+          "en": "to disappoint them.",
+          "ko": "그들을 실망시키는 것을"
+        }
+      ]
+    },
+    {
+      "sentence_id": 9,
+      "chunks": [
+        {
+          "en": "At first,",
+          "ko": "처음에,"
+        },
+        {
+          "en": "he believes",
+          "ko": "그는 믿는다"
+        },
+        {
+          "en": "that following adults",
+          "ko": "어른들을 따르는 것이"
+        },
+        {
+          "en": "is the right thing to do.",
+          "ko": "옳은 일이라고"
+        }
+      ]
+    },
+    {
+      "sentence_id": 10,
+      "chunks": [
+        {
+          "en": "However,",
+          "ko": "그러나,"
+        },
+        {
+          "en": "as time goes on,",
+          "ko": "시간이 지나면서,"
+        },
+        {
+          "en": "Hans starts to feel tired",
+          "ko": "한스는 피곤함을 느끼기 시작하고"
+        },
+        {
+          "en": "and confused.",
+          "ko": "혼란스러워진다"
+        }
+      ]
+    },
+    {
+      "sentence_id": 11,
+      "chunks": [
+        {
+          "en": "He has little time",
+          "ko": "그는 거의 시간이 없다"
+        },
+        {
+          "en": "to rest, play,",
+          "ko": "쉬거나, 놀거나,"
+        },
+        {
+          "en": "or enjoy nature.",
+          "ko": "자연을 즐길"
+        }
+      ]
+    },
+    {
+      "sentence_id": 12,
+      "chunks": [
+        {
+          "en": "Deep inside,",
+          "ko": "마음 깊은 곳에서,"
+        },
+        {
+          "en": "he begins to ask himself",
+          "ko": "그는 스스로에게 묻기 시작한다"
+        },
+        {
+          "en": "questions.",
+          "ko": "질문들을"
+        }
+      ]
+    },
+    {
+      "sentence_id": 13,
+      "chunks": [
+        {
+          "en": "Is this really",
+          "ko": "이것이 정말"
+        },
+        {
+          "en": "what I want?",
+          "ko": "내가 원하는 것일까?"
+        }
+      ]
+    },
+    {
+      "sentence_id": 14,
+      "chunks": [
+        {
+          "en": "Why do I have to live",
+          "ko": "나는 왜 살아야 하는 걸까"
+        },
+        {
+          "en": "only for others’ expectations?",
+          "ko": "오직 다른 사람들의 기대를 위해서만?"
+        }
+      ]
+    },
+    {
+      "sentence_id": 15,
+      "chunks": [
+        {
+          "en": "Hans meets a friend",
+          "ko": "한스는 친구를 만난다"
+        },
+        {
+          "en": "named Heilner,",
+          "ko": "하일너라는 이름의,"
+        },
+        {
+          "en": "who thinks differently.",
+          "ko": "다르게 생각하는"
+        }
+      ]
+    },
+    {
+      "sentence_id": 16,
+      "chunks": [
+        {
+          "en": "Heilner does not always agree",
+          "ko": "하일너는 항상 동의하지는 않는다"
+        },
+        {
+          "en": "with school rules",
+          "ko": "학교 규칙이나"
+        },
+        {
+          "en": "or church authority.",
+          "ko": "교회의 권위에"
+        }
+      ]
+    },
+    {
+      "sentence_id": 17,
+      "chunks": [
+        {
+          "en": "He speaks freely",
+          "ko": "그는 자유롭게 말하고"
+        },
+        {
+          "en": "and follows his own ideas.",
+          "ko": "자신만의 생각을 따른다"
+        }
+      ]
+    },
+    {
+      "sentence_id": 18,
+      "chunks": [
+        {
+          "en": "Through this friendship,",
+          "ko": "이 우정을 통해,"
+        },
+        {
+          "en": "Hans begins to realize",
+          "ko": "한스는 깨닫기 시작한다"
+        },
+        {
+          "en": "that there can be",
+          "ko": "~가 있을 수 있다는 것을"
+        },
+        {
+          "en": "different ways to live.",
+          "ko": "다른 삶의 방식들이"
+        }
+      ]
+    },
+    {
+      "sentence_id": 19,
+      "chunks": [
+        {
+          "en": "This is the moment",
+          "ko": "이것이 바로 그 순간이다"
+        },
+        {
+          "en": "when Hans starts to struggle",
+          "ko": "한스가 갈등하기 시작하는"
+        },
+        {
+          "en": "with authority.",
+          "ko": "권위와 함께"
+        }
+      ]
+    },
+    {
+      "sentence_id": 20,
+      "chunks": [
+        {
+          "en": "He respects",
+          "ko": "그는 존중한다"
+        },
+        {
+          "en": "his parents and teachers,",
+          "ko": "부모와 선생님들을,"
+        },
+        {
+          "en": "but he also feels uncomfortable.",
+          "ko": "하지만 동시에 불편함을 느낀다"
+        }
+      ]
+    },
+    {
+      "sentence_id": 21,
+      "chunks": [
+        {
+          "en": "He wants to think",
+          "ko": "그는 생각하고 싶다"
+        },
+        {
+          "en": "for himself,",
+          "ko": "스스로"
+        },
+        {
+          "en": "but he is afraid",
+          "ko": "그러나 그는 두렵다"
+        },
+        {
+          "en": "to go against adults.",
+          "ko": "어른들에게 맞서는 것이"
+        }
+      ]
+    },
+    {
+      "sentence_id": 22,
+      "chunks": [
+        {
+          "en": "Because he cannot express",
+          "ko": "그가 표현할 수 없기 때문에"
+        },
+        {
+          "en": "his true feelings,",
+          "ko": "자신의 진짜 감정을,"
+        },
+        {
+          "en": "his stress becomes worse.",
+          "ko": "그의 스트레스는 더 심해진다"
+        }
+      ]
+    },
+    {
+      "sentence_id": 23,
+      "chunks": [
+        {
+          "en": "Under the Wheel asks",
+          "ko": "『수레바퀴 아래서』는 질문을 던진다"
+        },
+        {
+          "en": "important questions",
+          "ko": "중요한 질문들을"
+        },
+        {
+          "en": "for teenagers.",
+          "ko": "청소년들에게"
+        }
+      ]
+    },
+    {
+      "sentence_id": 24,
+      "chunks": [
+        {
+          "en": "Should we always follow",
+          "ko": "우리는 항상 따라야 할까"
+        },
+        {
+          "en": "parents and teachers",
+          "ko": "부모와 선생님들을"
+        },
+        {
+          "en": "without thinking?",
+          "ko": "생각 없이?"
+        }
+      ]
+    },
+    {
+      "sentence_id": 25,
+      "chunks": [
+        {
+          "en": "Is being a “good student”",
+          "ko": "‘좋은 학생’이 되는 것이"
+        },
+        {
+          "en": "more important",
+          "ko": "더 중요한가"
+        },
+        {
+          "en": "than being happy?",
+          "ko": "행복해지는 것보다?"
+        }
+      ]
+    },
+    {
+      "sentence_id": 26,
+      "chunks": [
+        {
+          "en": "What happens",
+          "ko": "무슨 일이 일어나는가"
+        },
+        {
+          "en": "when we ignore",
+          "ko": "우리가 무시할 때"
+        },
+        {
+          "en": "our own voice?",
+          "ko": "우리 자신의 목소리를"
+        }
+      ]
+    },
+    {
+      "sentence_id": 27,
+      "chunks": [
+        {
+          "en": "This novel does not say",
+          "ko": "이 소설은 말하지 않는다"
+        },
+        {
+          "en": "that parents or schools",
+          "ko": "부모나 학교가"
+        },
+        {
+          "en": "are bad.",
+          "ko": "나쁘다고"
+        }
+      ]
+    },
+    {
+      "sentence_id": 28,
+      "chunks": [
+        {
+          "en": "Instead,",
+          "ko": "대신에,"
+        },
+        {
+          "en": "it shows",
+          "ko": "그것은 보여준다"
+        },
+        {
+          "en": "how dangerous it can be",
+          "ko": "얼마나 위험할 수 있는지를"
+        },
+        {
+          "en": "when a young person",
+          "ko": "어린 사람이"
+        },
+        {
+          "en": "has no chance",
+          "ko": "기회를 갖지 못할 때"
+        },
+        {
+          "en": "to think and choose.",
+          "ko": "생각하고 선택할"
+        }
+      ]
+    },
+    {
+      "sentence_id": 29,
+      "chunks": [
+        {
+          "en": "For students,",
+          "ko": "학생들에게,"
+        },
+        {
+          "en": "this story is",
+          "ko": "이 이야기는"
+        },
+        {
+          "en": "a chance",
+          "ko": "기회이다"
+        },
+        {
+          "en": "to stop and think.",
+          "ko": "멈춰서 생각해볼"
+        }
+      ]
+    },
+    {
+      "sentence_id": 30,
+      "chunks": [
+        {
+          "en": "Who am I living for?",
+          "ko": "나는 누구를 위해 살고 있는가?"
+        }
+      ]
+    },
+    {
+      "sentence_id": 31,
+      "chunks": [
+        {
+          "en": "Am I listening",
+          "ko": "나는 듣고 있는가"
+        },
+        {
+          "en": "to my own thoughts?",
+          "ko": "나 자신의 생각을"
+        }
+      ]
+    },
+    {
+      "sentence_id": 32,
+      "chunks": [
+        {
+          "en": "Hans’s story may be old,",
+          "ko": "한스의 이야기는 오래되었을지 모르지만,"
+        },
+        {
+          "en": "but his worries",
+          "ko": "그의 고민은"
+        },
+        {
+          "en": "are still very close",
+          "ko": "여전히 매우 가깝다"
+        },
+        {
+          "en": "to our lives today.",
+          "ko": "오늘날 우리의 삶에"
+        }
+      ]
+    }
+  ]
+}
