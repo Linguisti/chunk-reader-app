@@ -45,6 +45,6 @@ const styles: Record<string, CSSProperties> = {
     fontSize: 16,
     lineHeight: 1.6,
     whiteSpace: "pre-wrap",
-    color: "#222",
+    color: "#111",
   },
 };

@@ -59,6 +59,8 @@ const styles: Record<string, React.CSSProperties> = {
     border: "1px solid rgba(0,0,0,0.12)",
     borderRadius: 16,
     padding: 16,
+    background: "#fff",
+    color: "#111",
 
     // 너무 커서 비어보이면 거슬릴 수 있으니 최소 높이만 유지
     minHeight: 280,

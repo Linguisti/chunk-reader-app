@@ -12,9 +12,10 @@ type Props = {
   passageId: string;
   mode: ReaderMode;
   onBack: () => void;
+  rightSlot?: React.ReactNode;
 };
 
-export default function ReaderScreen({ passageId, mode, onBack }: Props) {
+export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Props) {
   const [passage, setPassage] = useState<Passage | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -65,6 +66,7 @@ export default function ReaderScreen({ passageId, mode, onBack }: Props) {
           <button style={styles.backBtn} onClick={onBack}>
             ← 목록으로
           </button>
+          {rightSlot ? <div style={styles.right}>{rightSlot}</div> : null}
         </div>
         <div style={styles.header}>
           <div style={styles.title}>Loading…</div>
@@ -80,6 +82,7 @@ export default function ReaderScreen({ passageId, mode, onBack }: Props) {
           <button style={styles.backBtn} onClick={onBack}>
             ← 목록으로
           </button>
+          {rightSlot ? <div style={styles.right}>{rightSlot}</div> : null}
         </div>
         <div style={styles.header}>
           <div style={styles.title}>Data Load Error</div>
@@ -154,6 +157,7 @@ export default function ReaderScreen({ passageId, mode, onBack }: Props) {
         <button style={styles.backBtn} onClick={onBack}>
           ← 모드 선택으로
         </button>
+        {rightSlot ? <div style={styles.right}>{rightSlot}</div> : null}
       </div>
 
       <div style={styles.header}>
@@ -192,10 +196,12 @@ const styles: Record<string, CSSProperties> = {
     fontFamily:
       'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"',
   },
-  topBar: { display: "flex", justifyContent: "flex-start", marginBottom: 10 },
+  topBar: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10, gap: 8 },
+  right: { display: "flex", alignItems: "center", gap: 8 },
   backBtn: {
-    border: "1px solid rgba(0,0,0,0.12)",
-    background: "#fff",
+    border: "1px solid var(--btn-border, rgba(0,0,0,0.12))",
+    background: "var(--btn-bg, #fff)",
+    color: "var(--btn-text, inherit)",
     borderRadius: 10,
     padding: "8px 12px",
     fontSize: 14,

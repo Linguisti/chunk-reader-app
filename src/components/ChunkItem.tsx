@@ -16,13 +16,14 @@ export default function ChunkItem({ en, ko, showKo }: Props) {
 }
 
 const styles: Record<string, CSSProperties> = {
-  block: { display: "flex", flexDirection: "column", gap: 6 },
-  en: { fontSize: 20, fontWeight: 600, lineHeight: 1.4 },
+  block: { display: "flex", flexDirection: "column", gap: 6, color: "#111" },
+  en: { fontSize: 20, fontWeight: 600, lineHeight: 1.4, color: "#111" },
   ko: {
     fontSize: 14,
     lineHeight: 1.35,
     opacity: 0.85,
     borderLeft: "3px solid rgba(0,0,0,0.2)",
     paddingLeft: 10,
+    color: "#111",
   },
 };
