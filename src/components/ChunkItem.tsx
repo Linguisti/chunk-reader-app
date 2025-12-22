@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 type Props = {
   en: string;
   ko: string;
@@ -13,7 +15,7 @@ export default function ChunkItem({ en, ko, showKo }: Props) {
   );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: Record<string, CSSProperties> = {
   block: { display: "flex", flexDirection: "column", gap: 6 },
   en: { fontSize: 20, fontWeight: 600, lineHeight: 1.4 },
   ko: {

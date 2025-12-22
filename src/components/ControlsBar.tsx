@@ -1,13 +1,35 @@
+import type { CSSProperties } from "react";
+
 type Props = {
+  canPrev: boolean;
   canTranslate: boolean;
   canNext: boolean;
+  onPrev: () => void;
   onTranslate: () => void;
   onNext: () => void;
 };
 
-export default function ControlsBar({ canTranslate, canNext, onTranslate, onNext }: Props) {
+export default function ControlsBar({
+  canPrev,
+  canTranslate,
+  canNext,
+  onPrev,
+  onTranslate,
+  onNext,
+}: Props) {
   return (
     <div style={styles.bar}>
+      <button
+        style={{ ...styles.btn, ...(canPrev ? {} : styles.btnDisabled) }}
+        disabled={!canPrev}
+        onClick={(e) => {
+          e.stopPropagation();
+          onPrev();
+        }}
+      >
+        ◀ 이전 청크
+      </button>
+
       <button
         style={{ ...styles.btn, ...(canTranslate ? {} : styles.btnDisabled) }}
         disabled={!canTranslate}
@@ -33,16 +55,15 @@ export default function ControlsBar({ canTranslate, canNext, onTranslate, onNext
   );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: Record<string, CSSProperties> = {
   bar: {
     display: "flex",
-    gap: 10,
+    gap: 8,
     marginTop: 12,
-    justifyContent: "space-between",
   },
   btn: {
-    flex: 1,
-    padding: "12px 12px",
+    flex: 1.2,
+    padding: "12px 10px",
     borderRadius: 12,
     border: "1px solid rgba(0,0,0,0.12)",
     background: "white",
