@@ -5,6 +5,7 @@ import ControlsBar from "./components/ControlsBar";
 import FullPassageView from "./components/FullPassageView";
 import type { Passage } from "./passageData";
 import { loadPassage } from "./passageData";
+import Popup from "./components/Popup";
 
 export type ReaderMode = "chunk" | "full";
 
@@ -13,9 +14,20 @@ type Props = {
   mode: ReaderMode;
   onBack: () => void;
   rightSlot?: React.ReactNode;
+  selectedSentences: number[]; // sentence_id list chosen in full view
+  onUpdateSelection: (ids: number[]) => void;
+  onChangeMode: (mode: ReaderMode) => void;
 };
 
-export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Props) {
+export default function ReaderScreen({
+  passageId,
+  mode,
+  onBack,
+  rightSlot,
+  selectedSentences,
+  onUpdateSelection,
+  onChangeMode,
+}: Props) {
   const [passage, setPassage] = useState<Passage | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -23,6 +35,14 @@ export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Pro
   const [sentenceIndex, setSentenceIndex] = useState(0);
   const [chunkIndex, setChunkIndex] = useState(-1);
   const [showKoForChunkIndex, setShowKoForChunkIndex] = useState<number | null>(null);
+  const [showEndPopup, setShowEndPopup] = useState(false);
+
+  const filteredSentences = useMemo(() => {
+    if (!passage) return [];
+    return mode === "chunk" && selectedSentences.length
+      ? passage.sentences.filter((s) => selectedSentences.includes(s.sentence_id))
+      : passage.sentences;
+  }, [passage, mode, selectedSentences]);
 
   useEffect(() => {
     let canceled = false;
@@ -52,12 +72,23 @@ export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Pro
 
   const header = useMemo(() => {
     if (!passage) return { title: "Loading...", sub: "" };
-    const progress = `Sentence ${sentenceIndex + 1} / ${passage.sentences.length}`;
+    const total = mode === "chunk" ? filteredSentences.length : passage.sentences.length;
+    const progress = `Sentence ${Math.min(sentenceIndex + 1, total)} / ${total}`;
     return {
       title: passage.title,
       sub: mode === "chunk" ? progress : "전체 보기",
     };
-  }, [passage, sentenceIndex, mode]);
+  }, [passage, sentenceIndex, mode, filteredSentences.length]);
+
+  const chunkEnabled = selectedSentences.length > 0;
+
+  useEffect(() => {
+    if (sentenceIndex >= filteredSentences.length) {
+      setSentenceIndex(0);
+      setChunkIndex(-1);
+      setShowKoForChunkIndex(null);
+    }
+  }, [filteredSentences.length, sentenceIndex]);
 
   if (loading) {
     return (
@@ -94,14 +125,12 @@ export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Pro
 
   const safePassage = passage as Passage;
 
-  const currentSentence = safePassage.sentences[sentenceIndex];
-  const lastChunkIndex = currentSentence.chunks.length - 1;
+  // If chunk mode has no selected sentences, fall back to full list (but UI should disable entry)
+  const currentSentence = filteredSentences[sentenceIndex] ?? filteredSentences[0];
+  const lastChunkIndex = currentSentence ? currentSentence.chunks.length - 1 : 0;
 
   const isSentenceComplete = chunkIndex >= lastChunkIndex;
-  const canNext =
-    chunkIndex < 0 ||
-    (chunkIndex >= 0 && chunkIndex < lastChunkIndex) ||
-    (isSentenceComplete && sentenceIndex < safePassage.sentences.length - 1);
+  const canNext = true; // always allow to surface end popup at final chunk
   const canPrev = chunkIndex > 0 || (chunkIndex === 0 && sentenceIndex > 0);
 
   function onTapReveal() {
@@ -124,8 +153,14 @@ export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Pro
       return;
     }
 
+    // reached end of sentence list
+    if (sentenceIndex >= filteredSentences.length - 1) {
+      setShowEndPopup(true);
+      return;
+    }
+
     setSentenceIndex((i) => {
-      const nextSentence = Math.min(safePassage.sentences.length - 1, i + 1);
+      const nextSentence = Math.min(filteredSentences.length - 1, i + 1);
       setChunkIndex(0);
       setShowKoForChunkIndex(null);
       return nextSentence;
@@ -143,12 +178,21 @@ export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Pro
     if (chunkIndex === 0 && sentenceIndex > 0) {
       setSentenceIndex((i) => {
         const newIndex = Math.max(0, i - 1);
-        const prevSentence = safePassage.sentences[newIndex];
+        const prevSentence = filteredSentences[newIndex];
         setChunkIndex(prevSentence.chunks.length - 1);
         setShowKoForChunkIndex(null);
         return newIndex;
       });
     }
+  }
+
+  function handleSentenceToggle(id: number) {
+    if (mode !== "full") return;
+    if (selectedSentences.includes(id)) {
+      onUpdateSelection(selectedSentences.filter((s) => s !== id));
+      return;
+    }
+    onUpdateSelection([...selectedSentences, id]);
   }
 
   return (
@@ -182,8 +226,53 @@ export default function ReaderScreen({ passageId, mode, onBack, rightSlot }: Pro
           />
         </>
       ) : (
-        <FullPassageView passage={safePassage} />
+        <>
+          <FullPassageView
+            passage={safePassage}
+            selectedSentenceIds={selectedSentences}
+            onToggle={handleSentenceToggle}
+          />
+          <div style={styles.fullActions}>
+            <button
+              style={{
+                ...styles.primaryBtn,
+                ...(chunkEnabled ? {} : styles.btnDisabled),
+              }}
+              disabled={!chunkEnabled}
+              onClick={() => chunkEnabled && onChangeMode("chunk")}
+            >
+              선택한 문장만 청크 읽기
+            </button>
+            {!chunkEnabled ? (
+              <div style={styles.helper}>전체 읽기에서 문장을 선택하면 활성화됩니다.</div>
+            ) : null}
+          </div>
+        </>
       )}
+
+      <Popup
+        open={showEndPopup}
+        title="모든 선택 문장을 확인했어요"
+        actions={[
+          {
+            label: "처음으로",
+            onClick: () => {
+              setSentenceIndex(0);
+              setChunkIndex(0);
+              setShowKoForChunkIndex(null);
+              setShowEndPopup(false);
+            },
+          },
+          {
+            label: "전체 읽기로 가기",
+            onClick: () => {
+              setShowEndPopup(false);
+              onChangeMode("full");
+            },
+          },
+        ]}
+        onClose={() => setShowEndPopup(false)}
+      />
     </div>
   );
 }
@@ -210,4 +299,18 @@ const styles: Record<string, CSSProperties> = {
   header: { marginBottom: 12 },
   title: { fontSize: 18, fontWeight: 700 },
   sub: { fontSize: 13, opacity: 0.7, marginTop: 4 },
+  fullActions: { marginTop: 12, display: "flex", flexDirection: "column", gap: 6 },
+  primaryBtn: {
+    border: "1px solid var(--btn-border, rgba(0,0,0,0.12))",
+    background: "var(--btn-bg, #fff)",
+    color: "var(--btn-text, inherit)",
+    borderRadius: 12,
+    padding: "12px 14px",
+    fontSize: 15,
+    fontWeight: 700,
+    cursor: "pointer",
+    boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+  },
+  btnDisabled: { opacity: 0.45, cursor: "not-allowed" },
+  helper: { fontSize: 13, opacity: 0.65 },
 };

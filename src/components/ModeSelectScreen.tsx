@@ -6,9 +6,10 @@ type Props = {
   onBack: () => void;
   onSelectMode: (mode: ReaderMode) => void;
   rightSlot?: React.ReactNode;
+  chunkEnabled: boolean;
 };
 
-export default function ModeSelectScreen({ title, onBack, onSelectMode, rightSlot }: Props) {
+export default function ModeSelectScreen({ title, onBack, onSelectMode, rightSlot, chunkEnabled }: Props) {
   return (
     <div style={styles.page}>
       <div style={styles.top}>
@@ -24,13 +25,19 @@ export default function ModeSelectScreen({ title, onBack, onSelectMode, rightSlo
       </div>
 
       <div style={styles.actions}>
-        <button style={styles.modeBtn} onClick={() => onSelectMode("chunk")}>
-          청크 읽기
-          <span style={styles.modeDesc}>문장을 한 덩어리씩 확인</span>
-        </button>
         <button style={styles.modeBtn} onClick={() => onSelectMode("full")}>
           전체 읽기
           <span style={styles.modeDesc}>지문 전체를 한 번에 보기</span>
+        </button>
+        <button
+          style={{ ...styles.modeBtn, ...(chunkEnabled ? {} : styles.disabled) }}
+          onClick={() => chunkEnabled && onSelectMode("chunk")}
+          disabled={!chunkEnabled}
+        >
+          청크 읽기
+          <span style={styles.modeDesc}>
+            {chunkEnabled ? "선택한 문장만 단계적으로 보기" : "전체 읽기에서 문장을 선택하면 활성화"}
+          </span>
         </button>
       </div>
     </div>
@@ -67,4 +74,5 @@ const styles: Record<string, CSSProperties> = {
     fontWeight: 700,
   },
   modeDesc: { display: "block", fontSize: 13, opacity: 0.7, marginTop: 4, fontWeight: 500 },
+  disabled: { opacity: 0.5, cursor: "not-allowed" },
 };

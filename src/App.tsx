@@ -67,6 +67,7 @@ export default function App() {
   const [selectedMode, setSelectedMode] = useState<ReaderMode | null>(null);
   const [themeKey, setThemeKey] = useState<ThemeKey>("white");
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [selectedSentences, setSelectedSentences] = useState<number[]>([]); // sentence_id list needing help
 
   const theme = useMemo(() => themes[themeKey], [themeKey]);
 
@@ -106,6 +107,7 @@ export default function App() {
   function handleSelectPassage(id: string) {
     setSelectedPassageId(id);
     setSelectedMode(null);
+    setSelectedSentences([]);
     setView("mode");
   }
 
@@ -157,11 +159,23 @@ export default function App() {
           onBack={handleBackToList}
           onSelectMode={handleSelectMode}
           rightSlot={settingsSlot}
+          chunkEnabled={selectedSentences.length > 0}
         />
       ) : null}
 
       {view === "read" && selectedPassageId && selectedMode ? (
-        <ReaderScreen passageId={selectedPassageId} mode={selectedMode} onBack={handleBackFromReader} rightSlot={settingsSlot} />
+        <ReaderScreen
+          passageId={selectedPassageId}
+          mode={selectedMode}
+          onBack={handleBackFromReader}
+          rightSlot={settingsSlot}
+          selectedSentences={selectedSentences}
+          onUpdateSelection={setSelectedSentences}
+          onChangeMode={(mode) => {
+            setSelectedMode(mode);
+            setView("read");
+          }}
+        />
       ) : null}
     </div>
   );
