@@ -129,7 +129,6 @@ export default function ReaderScreen({
   const currentSentence = filteredSentences[sentenceIndex] ?? filteredSentences[0];
   const lastChunkIndex = currentSentence ? currentSentence.chunks.length - 1 : 0;
 
-  const isSentenceComplete = chunkIndex >= lastChunkIndex;
   const canNext = true; // always allow to surface end popup at final chunk
   const canPrev = chunkIndex > 0 || (chunkIndex === 0 && sentenceIndex > 0);
 
