@@ -44,6 +44,18 @@ export default function ReaderScreen({
       : passage.sentences;
   }, [passage, mode, selectedSentences]);
 
+  const totalSelected = selectedSentences.length;
+  const chunkProgress = mode === "chunk" ? Math.min(sentenceIndex + 1, filteredSentences.length) : 0;
+
+  useEffect(() => {
+    if (mode === "chunk") {
+      setSentenceIndex(0);
+      setChunkIndex(-1);
+      setShowKoForChunkIndex(null);
+      setShowEndPopup(false);
+    }
+  }, [mode, filteredSentences.length]);
+
   useEffect(() => {
     let canceled = false;
     (async () => {
@@ -197,19 +209,38 @@ export default function ReaderScreen({
   return (
     <div style={styles.page}>
       <div style={styles.topBar}>
-        <button style={styles.backBtn} onClick={onBack}>
-          ← 모드 선택으로
-        </button>
+        <div style={styles.leftGroup}>
+          <button style={styles.backBtn} onClick={onBack}>
+            ← 목록으로
+          </button>
+          <div style={styles.titleGroup}>
+            <div style={styles.title}>{header.title}</div>
+            <div style={styles.badges}>
+              <span style={styles.badgePrimary}>{mode === "chunk" ? "청크 읽기" : "전체 읽기"}</span>
+              {mode === "chunk" ? (
+                <span style={styles.badgeSecondary}>
+                  선택 {totalSelected || filteredSentences.length}문장 중 {chunkProgress} 진행
+                </span>
+              ) : (
+                <span style={styles.badgeSecondary}>문장을 탭해 선택하세요</span>
+              )}
+            </div>
+          </div>
+        </div>
         {rightSlot ? <div style={styles.right}>{rightSlot}</div> : null}
-      </div>
-
-      <div style={styles.header}>
-        <div style={styles.title}>{header.title}</div>
-        <div style={styles.sub}>{header.sub}</div>
       </div>
 
       {mode === "chunk" ? (
         <>
+          <div style={styles.progressBar}>
+            <div
+              style={{
+                ...styles.progressFill,
+                width: `${filteredSentences.length ? (chunkProgress / filteredSentences.length) * 100 : 0}%`,
+              }}
+            />
+          </div>
+
           <SentenceFrame
             chunks={currentSentence.chunks}
             revealedUntil={chunkIndex}
@@ -217,21 +248,19 @@ export default function ReaderScreen({
             onTap={onTapReveal}
           />
 
-          <ControlsBar
-            canPrev={canPrev}
-            canNext={canNext}
-            onPrev={onPrevChunk}
-            onNext={onNextSentence}
-          />
+          <ControlsBar canPrev={canPrev} canNext={canNext} onPrev={onPrevChunk} onNext={onNextSentence} />
         </>
       ) : (
         <>
-          <FullPassageView
-            passage={safePassage}
-            selectedSentenceIds={selectedSentences}
-            onToggle={handleSentenceToggle}
-          />
+          <FullPassageView passage={safePassage} selectedSentenceIds={selectedSentences} onToggle={handleSentenceToggle} />
+
           <div style={styles.fullActions}>
+            <div style={styles.statsRow}>
+              <div>선택된 문장: {selectedSentences.length} / {safePassage.sentences.length}</div>
+              <button style={styles.resetBtn} onClick={() => onUpdateSelection([])}>
+                선택 초기화
+              </button>
+            </div>
             <button
               style={{
                 ...styles.primaryBtn,
@@ -240,11 +269,9 @@ export default function ReaderScreen({
               disabled={!chunkEnabled}
               onClick={() => chunkEnabled && onChangeMode("chunk")}
             >
-              선택한 문장만 청크 읽기
+              선택한 문장 청크 읽기 시작
             </button>
-            {!chunkEnabled ? (
-              <div style={styles.helper}>전체 읽기에서 문장을 선택하면 활성화됩니다.</div>
-            ) : null}
+            {!chunkEnabled ? <div style={styles.helper}>문장을 선택하면 청크 읽기가 활성화됩니다.</div> : null}
           </div>
         </>
       )}
@@ -295,10 +322,38 @@ const styles: Record<string, CSSProperties> = {
     fontSize: 14,
     cursor: "pointer",
   },
+  titleGroup: { display: "flex", flexDirection: "column", gap: 4 },
+  badges: { display: "flex", gap: 6, flexWrap: "wrap" },
+  badgePrimary: {
+    padding: "4px 8px",
+    borderRadius: 8,
+    background: "rgba(79,139,255,0.15)",
+    color: "#1f4fbf",
+    fontSize: 12,
+    fontWeight: 700,
+  },
+  badgeSecondary: {
+    padding: "4px 8px",
+    borderRadius: 8,
+    background: "rgba(0,0,0,0.06)",
+    fontSize: 12,
+    fontWeight: 600,
+    opacity: 0.8,
+  },
   header: { marginBottom: 12 },
   title: { fontSize: 18, fontWeight: 700 },
   sub: { fontSize: 13, opacity: 0.7, marginTop: 4 },
   fullActions: { marginTop: 12, display: "flex", flexDirection: "column", gap: 6 },
+  statsRow: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, fontSize: 14 },
+  resetBtn: {
+    border: "1px solid var(--btn-border, rgba(0,0,0,0.12))",
+    background: "var(--btn-bg, #fff)",
+    color: "var(--btn-text, inherit)",
+    borderRadius: 10,
+    padding: "8px 10px",
+    fontSize: 13,
+    cursor: "pointer",
+  },
   primaryBtn: {
     border: "1px solid var(--btn-border, rgba(0,0,0,0.12))",
     background: "var(--btn-bg, #fff)",
@@ -312,4 +367,17 @@ const styles: Record<string, CSSProperties> = {
   },
   btnDisabled: { opacity: 0.45, cursor: "not-allowed" },
   helper: { fontSize: 13, opacity: 0.65 },
+  progressBar: {
+    width: "100%",
+    height: 8,
+    background: "rgba(0,0,0,0.06)",
+    borderRadius: 999,
+    overflow: "hidden",
+    marginBottom: 10,
+  },
+  progressFill: {
+    height: "100%",
+    background: "#4f8bff",
+    transition: "width 160ms ease",
+  },
 };
