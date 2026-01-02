@@ -1,0 +1,186 @@
+{
+  "passage_id": "demo-4",
+  "title": "What Happens to Our Brain When We Eat Too Much?",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "chunks": [
+        { "en": "At Christmas,", "ko": "크리스마스에는," },
+        { "en": "many people eat", "ko": "많은 사람들이" },
+        { "en": "much more than usual.", "ko": "평소보다 훨씬 많이 먹는다." }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "chunks": [
+        { "en": "Food is important", "ko": "음식은 중요하다" },
+        { "en": "for our brain", "ko": "우리 뇌에" },
+        { "en": "because it helps us", "ko": "왜냐하면 그것은 우리를 돕기 때문이다" },
+        { "en": "think,", "ko": "생각하고," },
+        { "en": "remember,", "ko": "기억하고," },
+        { "en": "and focus.", "ko": "집중하는 데." }
+      ]
+    },
+    {
+      "sentence_id": 3,
+      "chunks": [
+        { "en": "Eating balanced meals", "ko": "균형 잡힌 식사를 하는 것은" },
+        { "en": "is good", "ko": "좋다" },
+        { "en": "for our mental health,", "ko": "우리의 정신 건강에," },
+        { "en": "but", "ko": "하지만" },
+        { "en": "what happens", "ko": "무슨 일이 일어날까" },
+        { "en": "when we eat", "ko": "우리가 먹을 때" },
+        { "en": "a very big meal?", "ko": "아주 많은 양의 식사를?" }
+      ]
+    },
+    {
+      "sentence_id": 4,
+      "chunks": [
+        { "en": "When we eat,", "ko": "우리가 먹을 때," },
+        { "en": "our body", "ko": "우리 몸은" },
+        { "en": "sends signals", "ko": "신호를 보낸다" },
+        { "en": "to the brain", "ko": "뇌로" },
+        { "en": "to say", "ko": "말하기 위해" },
+        { "en": "we are full.", "ko": "우리가 배부르다는 것을." }
+      ]
+    },
+    {
+      "sentence_id": 5,
+      "chunks": [
+        { "en": "Hormones", "ko": "호르몬은" },
+        { "en": "from the stomach", "ko": "위에서 나와" },
+        { "en": "help control", "ko": "조절하는 데 도움을 준다" },
+        { "en": "blood sugar", "ko": "혈당을" },
+        { "en": "by releasing insulin.", "ko": "인슐린을 분비함으로써." }
+      ]
+    },
+    {
+      "sentence_id": 6,
+      "chunks": [
+        { "en": "After a big meal,", "ko": "많이 먹은 후에," },
+        { "en": "many people", "ko": "많은 사람들이" },
+        { "en": "feel sleepy.", "ko": "졸음을 느낀다." }
+      ]
+    },
+    {
+      "sentence_id": 7,
+      "chunks": [
+        { "en": "This", "ko": "이것은" },
+        { "en": "is sometimes called", "ko": "때때로 불린다" },
+        { "en": "a food coma.", "ko": "'푸드 코마'라고." }
+      ]
+    },
+    {
+      "sentence_id": 8,
+      "chunks": [
+        { "en": "Scientists believe", "ko": "과학자들은 믿는다" },
+        { "en": "this feeling", "ko": "이 느낌이" },
+        { "en": "comes from hormones,", "ko": "호르몬에서 온다고," },
+        { "en": "not because", "ko": "왜냐하면 ~가 아니라" },
+        { "en": "blood moves away", "ko": "피가 이동해서가 아니라" },
+        { "en": "from the brain.", "ko": "뇌에서." }
+      ]
+    },
+    {
+      "sentence_id": 9,
+      "chunks": [
+        { "en": "Eating too much", "ko": "너무 많이 먹는 것은" },
+        { "en": "once", "ko": "한 번 정도는" },
+        { "en": "is not very harmful", "ko": "그다지 해롭지 않다" },
+        { "en": "for healthy people.", "ko": "건강한 사람들에게는." }
+      ]
+    },
+    {
+      "sentence_id": 10,
+      "chunks": [
+        { "en": "In one study,", "ko": "한 연구에서," },
+        { "en": "people ate", "ko": "사람들은 먹었다" },
+        { "en": "a very large meal,", "ko": "아주 많은 양의 식사를," },
+        { "en": "but", "ko": "하지만" },
+        { "en": "their blood sugar", "ko": "그들의 혈당은" },
+        { "en": "stayed normal.", "ko": "정상으로 유지되었다." }
+      ]
+    },
+    {
+      "sentence_id": 11,
+      "chunks": [
+        { "en": "This shows", "ko": "이것은 보여준다" },
+        { "en": "that our body", "ko": "우리 몸이" },
+        { "en": "can handle", "ko": "처리할 수 있다는 것을" },
+        { "en": "one big meal", "ko": "한 번의 큰 식사를" },
+        { "en": "quite well.", "ko": "꽤 잘." }
+      ]
+    },
+    {
+      "sentence_id": 12,
+      "chunks": [
+        { "en": "However,", "ko": "하지만," },
+        { "en": "eating too much", "ko": "너무 많이 먹는 것은" },
+        { "en": "for many hours", "ko": "여러 시간 동안 또는" },
+        { "en": "or many days", "ko": "여러 날 동안은" },
+        { "en": "is different.", "ko": "다르다." }
+      ]
+    },
+    {
+      "sentence_id": 13,
+      "chunks": [
+        { "en": "Studies show", "ko": "연구에 따르면" },
+        { "en": "that eating", "ko": "먹는 것이" },
+        { "en": "a lot of", "ko": "많은 양의" },
+        { "en": "fatty and sugary food", "ko": "기름지고 단 음식을" },
+        { "en": "for a long time", "ko": "오랜 시간 동안" },
+        { "en": "can put stress", "ko": "부담을 줄 수 있고" },
+        { "en": "on the body", "ko": "몸에" },
+        { "en": "and affect the brain.", "ko": "뇌에 영향을 줄 수 있다." }
+      ]
+    },
+    {
+      "sentence_id": 14,
+      "chunks": [
+        { "en": "Humans evolved", "ko": "인간은 진화했다" },
+        { "en": "to survive hunger,", "ko": "굶주림에서 살아남기 위해," },
+        { "en": "so", "ko": "그래서" },
+        { "en": "our bodies", "ko": "우리 몸은" },
+        { "en": "are good at handling", "ko": "잘 처리한다" },
+        { "en": "short times", "ko": "짧은 기간의" },
+        { "en": "of overeating.", "ko": "과식을." }
+      ]
+    },
+    {
+      "sentence_id": 15,
+      "chunks": [
+        { "en": "But", "ko": "하지만" },
+        { "en": "too much sugar and fat", "ko": "너무 많은 당분과 지방은" },
+        { "en": "for several days", "ko": "여러 날 동안" },
+        { "en": "can harm memory", "ko": "기억력을 해칠 수 있고" },
+        { "en": "and make it harder", "ko": "더 어렵게 만든다" },
+        { "en": "for the brain", "ko": "뇌가" },
+        { "en": "to know", "ko": "알도록 하는 것을" },
+        { "en": "when to stop eating.", "ko": "언제 먹는 것을 멈춰야 하는지." }
+      ]
+    },
+    {
+      "sentence_id": 16,
+      "chunks": [
+        { "en": "This means", "ko": "이는 의미한다" },
+        { "en": "one big holiday meal", "ko": "한 번의 큰 명절 식사는" },
+        { "en": "is usually okay,", "ko": "보통 괜찮지만," },
+        { "en": "but", "ko": "하지만" },
+        { "en": "eating too much", "ko": "너무 많이 먹는 것은" },
+        { "en": "for many days", "ko": "여러 날 동안" },
+        { "en": "can be unhealthy.", "ko": "건강에 좋지 않을 수 있다는 것이다." }
+      ]
+    },
+    {
+      "sentence_id": 17,
+      "chunks": [
+        { "en": "The best choice", "ko": "가장 좋은 선택은" },
+        { "en": "is to enjoy", "ko": "즐기는 것이다" },
+        { "en": "special meals", "ko": "특별한 식사를" },
+        { "en": "and then", "ko": "그리고 나서" },
+        { "en": "return to", "ko": "돌아가는 것이다" },
+        { "en": "balanced eating.", "ko": "균형 잡힌 식사로." }
+      ]
+    }
+  ]
+}
